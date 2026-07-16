@@ -1,5 +1,3 @@
-<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/855be7ab-a537-42aa-9c31-36c2df21bbe4" /># Personal Portfolio
-
 Hi, I'm Balaji N. 👋
 
 This repository contains the source code for my personal portfolio website, designed to showcase my experience in Java Full Stack Development and Data Science & Analytics.

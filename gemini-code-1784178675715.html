@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balaji N | Portfolio</title>
+    <style>
+        /* CSS RESET & VARIABLES */
+        :root {
+            --primary: #0f172a;
+            --secondary: #2563eb;
+            --bg-color: #f8fafc;
+            --card-bg: #ffffff;
+            --text-main: #334155;
+            --text-muted: #64748b;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--secondary);
+        }
+
+        /* LAYOUT & NAVIGATION */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: white;
+        }
+
+        .nav-links a {
+            color: white;
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #93c5fd;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 30px;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 10px;
+        }
+
+        /* HERO SECTION */
+        #hero {
+            background: linear-gradient(to right, #0f172a, #1e293b);
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        #hero h3 {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: #93c5fd;
+            margin-bottom: 20px;
+        }
+
+        #hero p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #1d4ed8;
+            color: white;
+        }
+        
+        .btn-outline {
+            background-color: transparent;
+            border: 2px solid var(--secondary);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--secondary);
+        }
+
+        /* SKILLS GRID */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .skill-card h4 {
+            color: var(--secondary);
+            margin-bottom: 15px;
+            font-size: 1.1rem;
+        }
+
+        /* CARDS (Projects & Experience) */
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
+        }
+
+        .card h3 {
+            color: var(--primary);
+        }
+
+        .tech-stack {
+            font-size: 0.9rem;
+            color: var(--secondary);
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        /* PROJECT GRID */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        /* CONTACT SECTION */
+        .contact-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .contact-card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        footer {
+            background-color: var(--primary);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* Can be replaced with a hamburger menu later */
+            }
+            #hero h1 {
+                font-size: 2.2rem;
+            }
+            .card-header {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Balaji N.</a>
+                <div class="nav-links">
+                    <a href="#about">About</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="hero">
+        <div class="container">
+            <h1>Hi, I'm Balaji N.</h1>
+            <h3>Java Full Stack Developer | Data Science & Analytics</h3>
+            <p>Bridging the gap between intelligent data systems and seamless user experiences through clean code and analytical problem-solving.</p>
+            <div>
+                <a href="#projects" class="btn">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am an MCA student specializing in Data Science & Analytics with hands-on experience building robust, responsive software. My technical foundation spans Java full-stack development, Python-based intelligent systems, and comprehensive data analysis. I thrive on solving complex analytical problems—whether that means training a computer vision model, extracting insights from unstructured data, or designing a clean, modern web interface.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h4>Programming Languages</h4>
+                    <p>Python, Java, C++, SQL, PHP, HTML, CSS, JavaScript</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Frameworks & Libraries</h4>
+                    <p>React.js, Next.js, Pandas, NumPy, Matplotlib, Seaborn, TensorFlow, Scikit-Learn</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Tools & Platforms</h4>
+                    <p>Power BI, Tableau, Git/GitHub, MySQL, Jupyter</p>
+                </div>
+                <div class="skill-card">
+                    <h4>Core Competencies</h4>
+                    <p>DSA, Machine Learning, NLP, Exploratory Data Analysis, Backend Integration</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Professional Experience</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Java Full Stack Developer Intern</h3>
+                    <span style="color: var(--text-muted);">Skyllx Technologies | Bengaluru</span>
+                </div>
+                <ul>
+                    <li>Designed responsive web applications and interactive tools, seamlessly integrating HTML, CSS, JavaScript, and Java backend logic.</li>
+                    <li>Improved UI/UX consistency and optimized core components to ensure seamless usability across the platform.</li>
+                    <li>Managed collaborative codebase version control and structured project delivery using Git and GitHub.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+                
+                <div class="card">
+                    <h3>AI Financial Tracking Platform</h3>
+                    <div class="tech-stack">React.js, Next.js, AI Integration</div>
+                    <p>Developed a modern financial tracking web application enabling seamless expense tracking and data visualization. Integrated and tested a custom AI module using sample bill images to successfully verify financial data extraction.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Traffic Signal Violation Detection</h3>
+                    <div class="tech-stack">Python, Computer Vision</div>
+                    <p>Built an intelligent computer vision detection system to continuously monitor and accurately flag traffic signal violations. Managed a dedicated repository to execute and optimize Python scripts for robust object detection.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Movie Trailer Sentiment Analysis</h3>
+                    <div class="tech-stack">Python, Data Analytics</div>
+                    <p>Compiled and structured a comprehensive 300-row dataset capturing audience reactions. Analyzed structured data arrays to evaluate overarching sentiment utilizing Python scripting and rigorous data validation.</p>
+                </div>
+
+                <div class="card">
+                    <h3>Student Grading System</h3>
+                    <div class="tech-stack">PHP, SQL</div>
+                    <p>Built a secure web-based portal to effectively manage student records, validate database inputs, and accurately track long-term academic performance.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="education">
+            <h2>Education & Certifications</h2>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Master of Computer Applications: Data Science</h3>
+                    <span style="color: var(--text-muted);">2024 – Present</span>
+                </div>
+                <p><strong>AMC Engineering College, Bengaluru</strong> | CGPA: 7.5</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h3>Bachelor of Computer Applications</h3>
+                    <span style="color: var(--text-muted);">2021 – 2024</span>
+                </div>
+                <p><strong>Arignar Anna College, Krishnagiri</strong></p>
+            </div>
+
+            <h3>Active Certifications</h3>
+            <ul>
+                <li><strong>Infosys Springboard:</strong> Introduction to AI, Deep Learning, Computer Vision 101, OpenAI GPT Models</li>
+                <li><strong>Simplilearn SkillUp:</strong> Introduction to Data Visualization, Java Programming for Beginners</li>
+                <li><strong>IBM SkillsBuild:</strong> Cybersecurity Fundamentals, Information Technology Fundamentals</li>
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Get In Touch</h2>
+            <p style="text-align: center; max-width: 600px; margin: 0 auto;">Let's build something great together. I am currently open to new opportunities in software development and data science.</p>
+            
+            <div class="contact-info">
+                <div class="contact-card">
+                    <h4>Email</h4>
+                    <a href="mailto:balajin945@gmail.com">balajin945@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <h4>Phone</h4>
+                    <p>+91-8526502110</p>
+                </div>
+                <div class="contact-card">
+                    <h4>Location</h4>
+                    <p>Bengaluru, India</p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Balaji N. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

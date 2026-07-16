@@ -15,5 +15,5 @@ This repository contains the source code for my personal portfolio website, desi
 I am an MCA student at AMC Engineering College, Bengaluru. I specialize in building robust backend systems, intelligent data solutions, and clean user interfaces. 
 
 ## 📫 Connect with me
-* **LinkedIn:** [Insert your LinkedIn link]
+* **LinkedIn:** https://github.com/balajin945
 * **Email:** balajin945@gmail.com

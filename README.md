@@ -3,7 +3,7 @@ Hi, I'm Balaji N. 👋
 This repository contains the source code for my personal portfolio website, designed to showcase my experience in Java Full Stack Development and Data Science & Analytics.
 
 ## 🚀 Live Website
-[View my live portfolio here](https://balajin945.github.io)
+[View my live portfolio here](https://https://github.com/balajin945/Balaji_N.github.io)
 
 ## 🛠️ Tech Stack
 * **HTML5:** Semantic structure and layout
